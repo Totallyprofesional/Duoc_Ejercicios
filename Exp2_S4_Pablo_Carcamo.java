@@ -74,7 +74,7 @@ public class Teatro4 {
 
                     System.out.println("Total a pagar: $" + precio);
                     
-                }else if (opcion ==2 ){
+                } else if (opcion == 2 ){
                     System.out.println("Fin del programa.");
                     break;
             }

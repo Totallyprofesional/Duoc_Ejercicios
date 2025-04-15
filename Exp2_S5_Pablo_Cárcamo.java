@@ -1,6 +1,6 @@
 import java.util.Scanner;
   
-public class Exp2_S5_Pablo_Cárcamo {  
+public class Exp2_S5_Pablo_Carcamo {  
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

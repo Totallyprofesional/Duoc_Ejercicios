@@ -1,13 +1,11 @@
-
 import java.util.Scanner;
-
+  
 public class Exp2_S5_Pablo_Cárcamo {  
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        // Iniciar variables
-        
+        // Iniciar variables 
         boolean[] fila1 = new boolean [7]; 
         boolean[] fila2 = new boolean [7]; 
         boolean[] fila3 = new boolean [7]; 
@@ -18,25 +16,12 @@ public class Exp2_S5_Pablo_Cárcamo {
         boolean[] fila8 = new boolean [7];                                                  
         
         int otra = 1; 
-        int opcion = 0; 
-        
-        int fila;   
-        int cantidad = 0;
-        int asiento = 0;     
-        
-        int Vip = 40000;
-        int General = 18000;    
-        int Palco = 13000;
-        int Platea = 30000;   
-        
-        int edad;
-        int descuento;
-        
-        int precio = 0;   
-        int total = 0;
+        int opcion = 0;   
+        int fila, cantidad = 0, asiento = 0;        
+        int Vip = 40000, General = 18000, Palco = 13000, Platea = 30000;   
+        int edad, descuento, precio = 0, total = 0;
         
         // Menú principal 
-        
         while (otra == 1) {
                        
             System.out.println("Bienvenido");
@@ -53,16 +38,13 @@ public class Exp2_S5_Pablo_Cárcamo {
             System.out.println("Por favor ingrese un valor: ");    
             opcion = sc.nextInt();         
             }
-             
-                // Venta de entradas
                 
+            // Venta de entradas 
             if (opcion == 1){                          
-    
                 System.out.println("Ingrese el numero de entradas que desea comprar");
                 cantidad = sc.nextInt();    
                                  
-                //Asientos por fila
-                    
+                //Asientos por fila                  
                 while(asiento < cantidad){                                            
                                                
                     System.out.println("");
@@ -170,7 +152,6 @@ public class Exp2_S5_Pablo_Cárcamo {
                         }
                     
                         // Asientos ocupados
-          
                         boolean reservado = false;
                         
                         if(fila == 1){ 
@@ -225,8 +206,7 @@ public class Exp2_S5_Pablo_Cárcamo {
                         }                      
                 }
                 
-                    // Precios
-                                              
+                    // Precios                                             
                     if (asiento >= 1 && asiento <= 10){ 
                     precio = Vip * cantidad;
                     System.out.println("Vip: $" + precio);
@@ -243,11 +223,8 @@ public class Exp2_S5_Pablo_Cárcamo {
                     precio = Platea * cantidad;
                     System.out.println("Platea: $" + precio);
                     } 
-                    
-                    
-                    
-                    // Edad y descuentos
-                    
+ 
+                    // Edad y descuentos                   
                     System.out.println("");
                     System.out.println("Ingrese edad:");
                     edad = sc.nextInt();
@@ -282,21 +259,18 @@ public class Exp2_S5_Pablo_Cárcamo {
                                     
                     descuento = precio;
                     
-                    // Total
-                                             
+                    // Total                         
                     total = cantidad * descuento;
                     System.out.println("");
                     System.out.println("Cantidad: "+ cantidad);          
                     System.out.println("Total a pagar: $" + total); 
-                  
-                
+                   
                 } else if (opcion == 2){                  
                     System.out.println("Fin del programa.");
                     break;
                 }    
                         
-            // Loop de compra
-            
+            // Loop de compra  
                 System.out.println("");
                 System.out.println("¿Desea comprar otra entrada?");
                 System.out.println("1) Sí");
@@ -307,17 +281,11 @@ public class Exp2_S5_Pablo_Cárcamo {
                 
                 if (otra == 2 ) {
                 System.out.println("Muchas gracias por su compra.");
-            }
-                
+            }  
                 while (otra < 1 || otra > 2) {
                 System.out.println("Por favor ingrese una opción: ");
                 otra = sc.nextInt();
-            }
-                
-        }   sc.close();
-        
+            }            
+        }   sc.close();      
     }  
 }     
-   
-
-
